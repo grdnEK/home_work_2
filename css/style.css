@@ -51,6 +51,12 @@ display: block;
 padding: 25px 0 25px 0;
 }
 
+.button a:hover
+{
+color:black;
+}
+
+
 .logo
 {
 	margin: 56px 0 0 40px;
@@ -87,27 +93,28 @@ padding: 235px 0 60px 0;
 .wrapper
 {
 	padding-bottom: 150px;
-	min-width: 1100px;
+	min-width: 1120px;
 }
 
-#main-intro
+.purple
 {
 	background-color: #87509c;
 }
 
-#main-intro .button
+.purple .button
 {
 	background-color: #eb7d4b;
 	box-shadow:inset 0 -4px 0 0 #c86a40;
 }
 
 
-#services
+.green
 {
 	background-color: #17c2a4;
 }
 
-#services h1, #services p, #services h2 {color: #fff;}
+.green h1, .green p, .green h2 {color: #fff;}
+
 
 .info-name
 {
@@ -137,52 +144,53 @@ padding: 235px 0 60px 0;
 .row-fluid
 {
     overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    max-width: 1120px;
 }
 
-.offerings
+.row-fluid-cell
 {
 	height: 100%;
     width: 260px;
     margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    float: left;
+    text-align: center;
+}
+.row-fluid-cell:nth-child(n+4)
+{
+margin-right: 0px;
 }
 
-.offerings img
+.row-fluid-cell img
 {
 	max-height: 140px;
 	max-width: 160px;
 	margin-bottom: 50px;
 }
 
-.offerings h2
+.row-fluid-cell h2
 {
 font: 26px 'Titillium Web';
 font-weight: bold;
 margin-bottom: 15px;
 }
 
-.offerings p
+.row-fluid-cell p
 {
 	font: 16px 'Titillium Web';
 	font-weight: 300;
 	text-align: center;
-	max-width: 200px;
+	padding: 0px 30px;
 }
 
-#about
+.cold
 {
 	background-color: #e7f1f8;
 }
 
-#about .more-info{width: 100%}
+.cold .more-info{width: 100%}
 
-#about h1, #about p, #about h2 {color: #3c4761;}
+.cold h1, .cold p, .cold h2 {color: #3c4761;}
 
 .photo
 {
@@ -190,44 +198,209 @@ margin-bottom: 15px;
     height: 200px;
     border-radius: 50%;
     background-color: #878787;
-    margin: 25px 0 40px 0;
+    margin: 25px auto 40px auto;
 }
 
 .profession {color: #30bae7; font-size: 16px; margin: -15px 0 20px 0;}
 
-#skills
+.white
 {
 background-color: #fff;
 }
 
-#skills h1, #skills p, #skills h2 {color: #3c4761;}
+.white h1, .white p, .white h2 {color: #3c4761;}
 
 .percent
 {
 width: 200px;
 height: 200px;
 border-radius: 50%;
-margin: 25px 0 40px 0;
 border: 12px solid;
-display: flex;
-justify-content: center;
-align-items: center;
+margin: 25px auto 40px auto;
 font-size: 55px;
+line-height: 3.5;
 }
 
-#portfolio
+.yellow
 {
 background-color: #ffdd99;
 }
 
-#portfolio h1, #portfolio p, #portfolio h2 {color: #393939;}
+.yellow h1, .yellow p, .yellow h2 {color: #393939;}
 
-#portfolio .more-info {width: 520px;}
+.yellow .more-info {width: 520px;}
 
-#portfolio .button
+.yellow .button
 {
 	background-color: #17c2a4;
 	box-shadow:inset 0 -4px 0 0 #14a58c;
 }
+
+
+
+
+.tabs {
+    position: relative;
+    left: 30%;
+    min-height: 360px;
+    clear: both;
+    padding-bottom: 140px;
+    overflow: hidden;
+    width: 540px;
+}
+.tab {
+  float: left;
+  padding-right: 10px;
+}
+.tab label {
+    background: #ebc985;
+    padding: 8px 25px;
+    border-radius: 5px;
+    margin-left: -1px;
+    position: relative;
+    left: 50%;
+    line-height: 3;
+    cursor: pointer;
+}
+.tab [type=radio] {
+  display: none;
+}
+.content {
+    width: 540px;
+    height: 360px;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background: url("../images/layout/laptop.png") no-repeat #ffdd99;
+    right: 0;
+    bottom: 0;
+    padding: 17px 0 0 66px;
+}
+
+.content img
+{
+	padding-bottom: 60px;
+	max-height: 257px;
+	max-width: 411px;
+}
+
+.content p
+{ 
+	text-transform: uppercase;
+    text-align: center;
+    width: 380px;
+}
+
+[type=radio]:checked ~ label {
+background: white;
+border-radius: 5px;
+z-index: 2;
+line-height: 3;
+cursor: pointer;
+}
+
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+
+.pink
+{
+background-color: #d74680;
+}
+
+.pink h1, .pink p, .pink h2 {color: #fff;}
+
+
+.reviews-wrapper 
+{ 
+	min-height: 500px;
+	max-width: 1120px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.reviews
+{
+	width: 475px;
+    float: left;
+    padding: 0 0 110px 85px;
+}
+
+.reviews-photo
+{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #787878;
+    border-radius: 50%;
+}
+
+.reviews p, .reviews h2
+{
+    padding-left: 150px;
+}
+
+.reviews h2
+{
+text-align: left;
+}
+
+.pink .yellow-firm
+{
+color: #ffcc99;
+}
+
+
+.blue
+{
+background-color: #3c5499;
+}
+
+.blue h1, .blue p, .blue h2 {color: #fff;}
+
+.blue .button
+{
+	background-color: #30bae7;
+	box-shadow:inset 0 -4px 0 0 #299ec5;
+}
+
+.blue .more-info {width: 100%;}
+
+form
+{
+width: 880px;
+margin: auto;
+}
+
+.name ,.email
+{
+width: 400px;
+height: 55px;
+padding-left: 20px;
+margin-bottom: 30px;
+background-color: #273a71;
+border-radius: 5px;
+border: none;
+}
+
+.name
+{
+margin-right: 20px;
+}
+
+textarea 
+{
+resize:vertical;
+width: 843px;
+padding-left: 20px;
+background-color: #273a71;
+border-radius: 5px;
+border: none;
+min-height: 200px;
+}
+
+
+
 /* Content
 ----------------------------------*/
