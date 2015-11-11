@@ -7,6 +7,7 @@
 body{
 	color: #000;
 	font: normal 18px 'Titillium Web', sans-serif;
+	min-width: 1300px;
 }
 img{	
 	border: 0;
@@ -49,13 +50,21 @@ padding: 0 12%;
 color: #fff;
 display: block;
 padding: 25px 0 25px 0;
+text-transform: uppercase;
+cursor: default;
 }
 
 .button a:hover
 {
-color:black;
+-webkit-box-shadow: 0 0 10px 1px #737CFF;
+box-shadow: 0 0 10px 1px #737CFF;
 }
 
+.left{margin: 0;}
+
+.mid{margin: auto;}
+
+.right{margin: 0 0 0 auto;}
 
 .logo
 {
@@ -72,20 +81,44 @@ color:black;
 {
 	margin: 60px 0 0 0;
 	float: right;
+	height: 50px;
+    max-width: 900px;
 }
 
 .menu li
 {
 	display: inline-block;
+	height: 41px;
+    margin: 0 12px 0 0;
+    float: left;
+
+}
+
+.menu li a
+{
+    height: 21px;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+
+.menu li a:hover ,.menu li.active a
+{
+background-color: #643a79;
+color: #cac0d0;	
 }
 
 .text-hi
 {
-padding: 235px 0 60px 0;
+width: 900px;
+margin: 0 auto 60px;
 }
 
-.text-hi h2{ 
-    font: 26px 'Titillium Web';
+.text-hi h1{ 
+    font: 38px 'Titillium Web';
     color: #f7f3ea;
     font-weight: bold;
 }
@@ -93,7 +126,16 @@ padding: 235px 0 60px 0;
 .wrapper
 {
 	padding-bottom: 150px;
-	min-width: 1120px;
+	width: 1120px;
+    margin: auto;
+}
+
+.header
+{
+	position: relative;
+	height: 101px;
+	overflow: hidden;
+    margin-bottom: 140px;
 }
 
 .purple
@@ -121,6 +163,7 @@ padding: 235px 0 60px 0;
 	font: 40px 'Titillium Web';
     font-weight: bold;
     padding: 120px 0 10px 0;
+    text-transform: uppercase;
 }
 
 .line
@@ -136,10 +179,60 @@ padding: 235px 0 60px 0;
 {
 	width: 593px;
 	margin: auto;
-	padding: 25px 0 50px 0;
+	padding: 25px 0 0 0;
 	text-align: center;
 	line-height: 1.4;
+	margin-bottom: 50px;
 }
+
+.social
+{
+    padding: 0 25px;
+    max-width: 210px;
+    height: 35px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.social ul
+{    
+	text-align: center;
+    font-size: 0;
+}
+
+.social li
+{
+	margin: 2px 5px 5px;
+    background: #bdd1df;
+    border-radius: 50%;
+}
+
+
+.social li:hover
+{
+-webkit-box-shadow: 0 0 2px 1px #737CFF;
+box-shadow: 0 0 2px 1px #737CFF;
+}
+
+
+.social li, .social li a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.social li a {
+    text-indent: -90000px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social li.emailaddress a {background-image: url("../images/layout/email.png");}
+.social li.twitter a {background-image: url("../images/layout/twitter.png");}
+.social li.facebook a {background-image: url("../images/layout/facebook.png");}
+.social li.in a {background-image: url("../images/layout/linkedin.png");}
+
 
 .row-fluid
 {
@@ -181,6 +274,7 @@ margin-bottom: 15px;
 	font-weight: 300;
 	text-align: center;
 	padding: 0px 30px;
+	margin-bottom: 30px;
 }
 
 .cold
@@ -198,7 +292,17 @@ margin-bottom: 15px;
     height: 200px;
     border-radius: 50%;
     background-color: #878787;
-    margin: 25px auto 40px auto;
+    margin: 25px auto 40px;
+}
+
+.photo img
+{
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    height: 200px;
+    width: 200px;
+    margin: 0;
 }
 
 .profession {color: #30bae7; font-size: 16px; margin: -15px 0 20px 0;}
@@ -336,6 +440,16 @@ background-color: #d74680;
     border-radius: 50%;
 }
 
+.reviews-photo img
+{
+width: 100px;
+height: 100px;
+max-width: 100px;
+max-height: 100px;
+margin: 0;
+border-radius: 50%;
+}
+
 .reviews p, .reviews h2
 {
     padding-left: 150px;
@@ -388,19 +502,48 @@ border: none;
 {
 margin-right: 20px;
 }
+.name ,.email, textarea{color: #fff;}
 
 textarea 
 {
 resize:vertical;
-width: 843px;
-padding-left: 20px;
+width: 825px;
+padding: 20px;
 background-color: #273a71;
 border-radius: 5px;
 border: none;
 min-height: 200px;
+margin-bottom: 60px;
 }
 
+.name:focus, .name:hover, .email:focus, .email:hover, textarea:focus, textarea:hover
+{
+-webkit-box-shadow: 0 0 5px 1px #737CFF;
+box-shadow: 0 0 5px 1px #737CFF;	
+}
 
+.dark_blue{background-color: #344b8e}
 
+.footer
+{
+    width: 1120px;
+    height: 115px;
+    margin: auto;
+    text-align: center; 
+    overflow: hidden;
+}
+
+.footer a
+{
+    font-size: 24px;
+    color: #fff;
+    margin-left: 50px;
+    line-height: 5;
+}
+
+.footer a:hover, .footer .active
+{
+    color: #33ccff;
+}
 /* Content
 ----------------------------------*/
